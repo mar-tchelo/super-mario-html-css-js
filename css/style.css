@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+    display: flex;
+    padding-top: 50px;
+    
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+   background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/da033e72-0c02-4f60-a051-5fbf5205e7e8/d2uos3h-3779b31a-2af6-4b2f-bdb8-8f41e22053d1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RhMDMzZTcyLTBjMDItNGY2MC1hMDUxLTVmYmY1MjA1ZTdlOFwvZDJ1b3MzaC0zNzc5YjMxYS0yYWY2LTRiMmYtYmRiOC04ZjQxZTIyMDUzZDEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vWvuI0GevMKrTUD9FpsiHgv-A-GmmBPlNIqq6qbJVwg');
+   
+    background-size: contain;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+   
+    animation: pipe-animation 1s infinite linear;
+}
+
+.mario{
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width:550px;
+    animation: clauds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+        from {
+            right: 0; 
+    }to{
+        right: 100%;
+    }
+
+}
+
+@keyframes jump{
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px; 
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom:0 ;
+    }
+
+}
+
+@keyframes clauds-animation {
+    from {
+        right: -550px; 
+    }to{
+        right: 100%;
+    }
+
+}
